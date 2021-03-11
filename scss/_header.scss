@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+
+$main: #ef3340;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Noto Sans", sans-serif;
+}
+
+*::selection {
+	background: rgba(0, 0, 0, 0.2);
+	color: #fff;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+	display: flex;
+	transition: padding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+a {
+	text-decoration: none;
+	color: $main;
+}
+
+header {
+	z-index: 5;
+	opacity: 0;
+	transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+	.nav {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 80px;
+
+		.title {
+			line-height: 80px;
+			padding: 0 120px;
+			font-size: 24px;
+			color: #fff;
+			font-weight: 900;
+		}
+
+		.toggle {
+			position: absolute;
+			margin: auto;
+			width: 46px;
+			height: 46px;
+			right: 120px;
+			top: 0;
+			bottom: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 10;
+			cursor: pointer;
+
+			.bar {
+				position: relative;
+				width: 40px;
+				height: 2px;
+				background: #fff;
+
+				&:before,
+				&:after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: inherit;
+					left: 0;
+					transform-origin: center center;
+					transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+				}
+
+				&:before {
+					top: -10px;
+				}
+
+				&:after {
+					bottom: -10px;
+				}
+			}
+
+			&.clicked {
+				.bar {
+					background: transparent;
+
+					&:before,
+					&:after {
+						background: #000;
+					}
+
+					&:before {
+						transform: rotate(45deg);
+						top: 0;
+					}
+					&:after {
+						transform: rotate(-45deg);
+						bottom: 0;
+					}
+				}
+			}
+		}
+
+		nav {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			flex-direction: row;
+			opacity: 0;
+			z-index: 5;
+			transition: opacity 0.5s ease;
+
+			.showcase {
+				background: #000;
+				flex: 1;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.showcase-container {
+					width: 50%;
+					position: relative;
+					overflow: hidden;
+
+					&:before {
+						content: "";
+						display: block;
+						padding-top: 100%;
+					}
+				}
+
+				.showcase-menu {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					overflow-y: visible;
+					list-style-type: none;
+					transition: top 0.25s ease;
+
+					li {
+						width: 100%;
+						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 40px;
+						text-transform: uppercase;
+						text-align: center;
+						overflow: hidden;
+						background-position: center center;
+						background-repeat: no-repeat;
+						background-size: cover;
+						position: relative;
+						z-index: 1;
+
+						&.overlay {
+							&:before {
+								content: "";
+								position: absolute;
+								left: 0;
+								top: 0;
+								right: 0;
+								bottom: 0;
+								background: rgba(0, 0, 0, 0.6);
+								z-index: -1;
+							}
+						}
+					}
+				}
+			}
+
+			.menu {
+				background: #fff;
+				flex: 1;
+
+				ul {
+					width: 100%;
+					padding: 80px 48px 24px 48px;
+					list-style-type: none;
+					max-height: 100%;
+					overflow-y: auto;
+
+					&::-webkit-scrollbar {
+						width: 6px;
+						height: 10px;
+
+						&-button {
+							width: 0px;
+							height: 0px;
+						}
+
+						&-thumb {
+							background: rgba(0, 0, 0, 0.4);
+							border: 0px none #ffffff;
+							border-radius: 3px;
+
+							&:hover {
+								background: #000;
+							}
+
+							&:active {
+								background: #000;
+							}
+						}
+
+						&-track {
+							background: rgba(0, 0, 0, 0.1);
+							border: 0px none #ffffff;
+							border-radius: 0;
+
+							&:hover {
+								background: rgba(0, 0, 0, 0.1);
+							}
+
+							&:active {
+								background: rgba(0, 0, 0, 0.1);
+							}
+						}
+
+						&-corner {
+							background: transparent;
+						}
+					}
+
+					li {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+
+						.number {
+							display: inline-block;
+							padding: 0 0 0 80px;
+							overflow: hidden;
+
+							span {
+								display: block;
+								font-size: 48px;
+								font-weight: 400;
+								transition: transform 0.25s ease;
+								transform: translateY(100%);
+							}
+						}
+
+						a {
+							display: inline-block;
+							font-size: 48px;
+							color: #000;
+							line-height: 1;
+							padding: 24px 0 24px 80px;
+							transition: transform 0.25s ease;
+						}
+
+						&:hover {
+							a {
+								transform: translateX(20px);
+							}
+						}
+
+						&.hover {
+							.number {
+								span {
+									transform: translateY(0);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.hidden {
+				display: none;
+			}
+
+			&.open {
+				opacity: 1;
+
+				.showcase {
+					animation: slideInLeft 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+				}
+
+				.menu {
+					animation: slideInRight 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+				}
+			}
+		}
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInLeft {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.content {
+	position: relative;
+	flex: 1;
+	padding: 80px 40px 40px;
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/124740/2018-09-28%2009_21_48-https___d2kbkpwf98wmwo.cloudfront.net_videos_hero-lg.mp4.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	p {
+		color: #fff;
+		opacity: 0;
+		transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+		a {
+			color: #fff;
+			box-shadow: 0 1px 0 0 $main;
+		}
+	}
+}
