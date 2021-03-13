@@ -1,5 +1,5 @@
 {
-  "name": "gtrtechnolgy",
+  "name": "gtrtechnology",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gtrtechnology/gtrtechnolgy.git"
+    "url": "git+https://github.com/gtrtechnology/gtrtechnology.git"
   },
   "author": "GTR",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gtrtechnology/gtrtechnolgy/issues"
+    "url": "https://github.com/gtrtechnology/gtrtechnology/issues"
   },
-  "homepage": "https://github.com/gtrtechnology/gtrtechnolgy#readme",
+  "homepage": "https://github.com/gtrtechnology/gtrtechnology#readme",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",

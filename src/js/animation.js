@@ -19,7 +19,7 @@ $(document).ready(function() {
 	$('.toggle').on('click', toggleMenu);
 	
 	// for showcase only
-	var tl = new TimelineMax(),
+	var tl = new gsap.timeline(),
 			body = $('body'),
 			header = $('header'),
 			content = $('.content p'),

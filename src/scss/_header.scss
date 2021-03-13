@@ -21,6 +21,9 @@ body {
 }
 
 body {
+	background-image: url('/src/images/bg/bioshock.jpg');
+	background-position: center;
+	background-size: cover;
 	overflow: hidden;
 	display: flex;
 	transition: padding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -326,7 +329,6 @@ header {
 	position: relative;
 	flex: 1;
 	padding: 80px 40px 40px;
-	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/124740/2018-09-28%2009_21_48-https___d2kbkpwf98wmwo.cloudfront.net_videos_hero-lg.mp4.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -341,4 +343,30 @@ header {
 			box-shadow: 0 1px 0 0 $main;
 		}
 	}
+}
+
+.icon .user path
+{
+	stroke-dasharray: 1560;
+	stroke-dashoffset: 0;
+}
+
+.icon .user:hover path
+{
+	animation: animate-user 2s linear forwards
+}
+
+@keyframes animate-user{
+	0%{
+		stroke-dashoffset: 0;
+	}
+	40%{
+		stroke-dashoffset: 1560;
+	}
+	80%{
+		stroke-dashoffset: 3120;
+	}
+}
+.w-9{
+	width: 9%;
 }
