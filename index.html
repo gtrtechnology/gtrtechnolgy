@@ -14,10 +14,12 @@
 
   </head>
   <body>
-    <header>
+    <header class="pb-5">
         <div class="nav shadow">
             <div class="title">
-                <img src="/src/images/logo-gtr/VectorEPS_ByTailorBrands.svg" class="w-9" alt="">
+                <a href="#">
+                    <img src="/src/images/logo-gtr/VectorEPS_ByTailorBrands.svg" class="w-9" alt="">
+                </a>
             </div>
             <div class="toggle">
                 <div class="bar"></div>
@@ -66,10 +68,49 @@
             
         </div>
     </header>
-    
-    <main>
-        <div class="content">
-
+    <main class="container text-center mx-auto my-auto">
+        <div class="mt-5">
+            <h1 class="my-name-is">Hola,</h1>
+            <h1 class="my-name-is">Soy Ricardo Galán Trejo</h1>
+            <h1 class="my-name-is">Desarrollador Front-End</h1>
+        </div>
+        <div class="d-flex flex-direction-row">
+            <div class="card">
+                <div class="content">
+                    <h2>ADIP</h2>
+                    <h3>Front-End</h3>
+                    <p>Desarrollo de software para las distintas dependencias y órganos de gobierno de la ciudad.</p>
+                    <a href="https://adip.cdmx.gob.mx/">ADIP</a>
+                    <img src="/src/images/works/android-chrome-192x192.png" class="w-75 adip pt-4" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>Espora</h2>
+                    <h3>Front-End</h3>
+                    <p>Desarrollador en agencias de estrategia política digital.</p>
+                    <a href="https://adip.cdmx.gob.mx/">Espora</a>
+                    <img src="/src/images/works/espora logo menu.svg" class="w-100 espora pt-5" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>Mariachi.io</h2>
+                    <h3>Front-End</h3>
+                    <p>Desarrollador Front End. Start-up dedicada al desarrollo de software.</p>
+                    <a href="https://adip.cdmx.gob.mx/">Mariachi</a>
+                    <img src="/src/images/works/mariachi.png" class="w-75 mariachi pt-4" alt="">
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>Vive Bamba</h2>
+                    <h3>Front-End</h3>
+                    <p>Desarrollador Front-End PHP. Empresa de seguros.</p>
+                    <a href="https://vivebamba.com/">Bamba</a>
+                    <img src="/src/images/works/BAM_Logo.png" class="w-100 bamba pt-5" alt="">
+                </div>
+            </div>
         </div>
     </main>
 
@@ -91,6 +132,18 @@
 
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
+
+    <!-- Vanilla -->
+    <script type="text/javascript" src="/src/js/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+
 
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->

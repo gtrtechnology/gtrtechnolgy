@@ -19,7 +19,7 @@ $(document).ready(function() {
 	$('.toggle').on('click', toggleMenu);
 	
 	// for showcase only
-	var tl = new gsap.timeline(),
+	var tl = new TimelineMax(),
 			body = $('body'),
 			header = $('header'),
 			content = $('.content p'),
@@ -27,7 +27,7 @@ $(document).ready(function() {
 			nav = $('nav');
 	
 	tl.to(body, 1, {
-		padding: '0 80px 80px',
+		// padding: '0 80px 80px',
 		delay: .5
 	});
 	
