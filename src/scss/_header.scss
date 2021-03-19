@@ -220,6 +220,7 @@ header {
 			.menu {
 				background: #fff;
 				flex: 1;
+				cursor: auto;
 
 				ul {
 					width: 100%;
@@ -332,6 +333,9 @@ header {
 			}
 		}
 	}
+}
+main{
+	cursor: none;
 }
 
 @keyframes slideInRight {

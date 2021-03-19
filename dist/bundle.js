@@ -19,6 +19,16 @@ eval("$(document).ready(function () {\n  navNumbers();\n  backToDefault(); // sh
 
 /***/ }),
 
+/***/ "./src/js/circle.js":
+/*!**************************!*\
+  !*** ./src/js/circle.js ***!
+  \**************************/
+/***/ (() => {
+
+eval("var text = document.querySelector('.text');\ntext.innerHTML = text.textContent.replace(/\\S/g, \"<span>$&</span>\");\nvar element = document.querySelectorAll('span');\n\nfor (var i = 0; i < element.length; i++) {\n  element[i].style.transform = \"rotate(\" + i * 24.5 + \"deg)\";\n}\n\ndocument.addEventListener(\"mousemove\", function (e) {\n  text.style.left = e.pageX + 'px';\n  text.style.top = e.pageY + 'px';\n});\n\n//# sourceURL=webpack://gtrtechnology/./src/js/circle.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -26,7 +36,7 @@ eval("$(document).ready(function () {\n  navNumbers();\n  backToDefault(); // sh
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/styles.scss */ \"./src/scss/styles.scss\");\n\n\n__webpack_require__(/*! ./animation.js */ \"./src/js/animation.js\");\n\n//# sourceURL=webpack://gtrtechnology/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/styles.scss */ \"./src/scss/styles.scss\");\n\n\n__webpack_require__(/*! ./animation.js */ \"./src/js/animation.js\");\n\n__webpack_require__(/*! ./circle.js */ \"./src/js/circle.js\");\n\n//# sourceURL=webpack://gtrtechnology/./src/js/index.js?");
 
 /***/ }),
 
