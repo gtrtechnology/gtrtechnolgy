@@ -31,7 +31,8 @@ body {
 }
 
 body {
-	background-image: url('/src/images/bg/bioshock.jpg');
+	// background-image: url('/src/images/bg/bioshock.jpg');
+	background: linear-gradient(to bottom, #000, #dff1ff);//#5d87d9
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
@@ -60,10 +61,8 @@ header {
 			line-height: 80px;
 			padding: 0 120px;
 			font-size: 24px;
-			color: #fff;
 			font-weight: 900;
 		}
-
 		.title a:after {    
 			background: none repeat scroll 0 0 transparent;
 			bottom: 0;
@@ -72,7 +71,7 @@ header {
 			height: 2px;
 			left: 50%;
 			position: absolute;
-			background: #000;
+			background: #fff;
 			transition: width 0.3s ease 0s, left 0.3s ease 0s;
 			width: 0;
 		  }
@@ -401,26 +400,23 @@ main{
 .w-9{
 	width: 9%;
 }
-.my-name-is{
-	font-family: $font-main;
-	// text-align: left;
-}
-.my-name-is:after {    
-	background: none repeat scroll 0 0 transparent;
-	// bottom: 0;
-	content: "";
-	display: block;
-	height: 2px;
-	left: 50%;
-	position: absolute;
-	background: #fff;
-	transition: width 0.3s ease 0s, left 0.3s ease 0s;
-	width: 0;
-  }
-  .my-name-is:hover:after { 
-	width: 100%; 
-	left: 0; 
-  }
+
+// .my-name-is:after {    
+// 	background: none repeat scroll 0 0 transparent;
+// 	// bottom: 0;
+// 	content: "";
+// 	display: block;
+// 	height: 2px;
+// 	left: 50%;
+// 	position: absolute;
+// 	background: #fff;
+// 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+// 	width: 0;
+//   }
+//   .my-name-is:hover:after { 
+// 	width: 100%; 
+// 	left: 0; 
+//   }
 
 .card{
 	position: relative;

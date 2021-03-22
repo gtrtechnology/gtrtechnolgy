@@ -22,16 +22,22 @@ $(document).ready(function() {
 	var tl = new TimelineMax(),
 			body = $('body'),
 			header = $('header'),
+			footer = $('footer'),
 			content = $('.content p'),
 			toggle = $('.toggle'),
 			nav = $('nav');
 	
 	tl.to(body, 1, {
-		padding: '0 80px 80px',
+		padding: '0px 80px 0px 80px',
 		delay: .5
 	});
 	
 	tl.to(header, .25, {
+		opacity: 1,
+		delay: .5
+	});
+
+	tl.to(footer, .25, {
 		opacity: 1,
 		delay: .5
 	});
