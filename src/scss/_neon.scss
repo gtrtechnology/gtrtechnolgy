@@ -1,7 +1,8 @@
 .my-name-is{
+	margin: 1em 0;
 	font-family: $font-main;
 	position: relative;
-	-webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+	// -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
 	line-height: 0.70em;
 	outline: none;
 	animation: animateNeon 5s linear infinite;
@@ -19,4 +20,54 @@
 						0 0 80px #03bcf4,
 						0 0 160px #03bcf4,
 	 }
+}
+
+// ScriptNeon
+.box{
+	position: relative;
+	width: 600px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box h1{
+	color:#fff;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-shadow:	0 0 10px #03bcf4,
+					0 0 20px #03bcf4,
+					0 0 40px #03bcf4,
+					0 0 80px #03bcf4,
+					0 0 120px #03bcf4;
+}
+.lightbar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 100%;
+	border-radius:  10px;
+	background: #fff;
+	z-index: 2;
+	box-shadow:		0 0 10px #03bcf4,
+					0 0 20px #03bcf4,
+					0 0 40px #03bcf4,
+					0 0 80px #03bcf4,
+					0 0 120px #03bcf4;
+	animation: animatelightbar 5s linear infinite;
+}
+@keyframes animatelightbar{
+	0%,5%{
+		transform: scaleY(0) translateX(0);
+	}
+	10%{
+		transform: scaleY(1) translateX(0);
+	}
+	90%{
+		transform: scaleY(1) translateX(calc(600px - 10px));
+	}
+	95%,100%{
+		transform: scaleY(0) translateX(calc(600px - 10px));
+	}
 }
